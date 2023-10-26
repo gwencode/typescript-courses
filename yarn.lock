@@ -3918,17 +3918,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/ts-utils@npm:2.10.0":
-  version: 2.10.0
-  resolution: "@parcel/ts-utils@npm:2.10.0"
-  dependencies:
-    nullthrows: ^1.1.1
-  peerDependencies:
-    typescript: ">=3.0.0"
-  checksum: 7151fef86f358e780db3153405598193a7e816ced2de1c61ed3250a04e41a759b4dee959db02630fee8a4a3b4b4561e4e04de7abb1dd99fba635bd3452f7f960
-  languageName: node
-  linkType: hard
-
 "@parcel/ts-utils@npm:2.10.1":
   version: 2.10.1
   resolution: "@parcel/ts-utils@npm:2.10.1"
@@ -21449,15 +21438,15 @@ __metadata:
   linkType: hard
 
 "sass@npm:^1.69.3":
-  version: 1.69.4
-  resolution: "sass@npm:1.69.4"
+  version: 1.69.5
+  resolution: "sass@npm:1.69.5"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: ed5558445b59dfa711e094f804e4a360544dd916c069ee211e1c687446146721d91d4304f33fe5df3966a10de96eba43369beb2e14f0881c285424e5e44cf360
+  checksum: c66f4f02882e7aa7aa49703824dadbb5a174dcd05e3cd96f17f73687889aab6027d078b518e2c04b594dfd89b2f574824bf935c7aee46c770aa6be9aafcc49f2
   languageName: node
   linkType: hard
 
