@@ -52,3 +52,18 @@ setTimeout(() => {
 function add(a: number, b: number): number {
   return a + b
 }
+
+// Objects, Arrays and Tuples
+let car : {
+  make: string
+  model: string
+  year: number
+}
+
+let honda = {
+  make: 'Honda',
+  model: 'Accord',
+  year: 2020
+}
+
+console.log(honda.make)
