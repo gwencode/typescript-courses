@@ -52,34 +52,48 @@ function careForDog(dog: Dog) {
 // console.log(aDog.bark())
 // console.log(aDog.eat("bacon"))
 
+// Multiple Implements // Extends and Implements at the same time
 
-class LivingOrganism {
-  isAlive() {
-    return true
-  }
+// class LivingOrganism {
+//   isAlive() {
+//     return true
+//   }
+// }
+// interface AnimalLike {
+//   eat(food: string): void
+// }
+// interface CanBark {
+//   bark(): string
+// }
+
+// class Dog
+//   extends LivingOrganism
+//   implements AnimalLike, CanBark
+// {
+//   bark() {
+//     return "woof"
+//   }
+//   eat(food: string): string {
+//     return "eating " + food
+//   }
+// }
+
+// const aDog = new Dog()
+// console.log(aDog.bark())
+// console.log(aDog.eat("bacon"))
+// console.log(aDog.isAlive())
+
+// Open Interfaces
+
+interface AnimalLike {
+  isAlive(): boolean
 }
+function feed(animal: AnimalLike) {
+  animal.eat
+  animal.isAlive
+}
+
+// SECOND DECLARATION OF THE SAME NAME
 interface AnimalLike {
   eat(food: string): void
 }
-interface CanBark {
-  bark(): string
-}
-
-// Multiple Implements // Extends and Implements at the same time
-
-class Dog
-  extends LivingOrganism
-  implements AnimalLike, CanBark
-{
-  bark() {
-    return "woof"
-  }
-  eat(food: string): string {
-    return "eating " + food
-  }
-}
-
-const aDog = new Dog()
-console.log(aDog.bark())
-console.log(aDog.eat("bacon"))
-console.log(aDog.isAlive())
