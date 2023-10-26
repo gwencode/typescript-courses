@@ -120,3 +120,43 @@ const phones: {
 } = {}
 
 phones.fax
+
+// Arrays
+
+const carsArray: {
+  make: string
+  model: string
+  year: number
+}[] = []
+
+const cars = [
+  {
+    make: 'Ford',
+    model: 'F-150',
+    year: 2020
+  }
+]
+
+// Tuples
+
+const carTuple: [number, string, string] = [
+  2020,
+  'Ford',
+  'F-150',
+]
+
+// Limitations
+// Limitations of tuples don't prevent pop and push
+
+const numPair: [number, number] = [4, 5]
+numPair.push(6) // [4, 5, 6]
+console.log(numPair)
+
+numPair.pop() // [4, 5]
+console.log(numPair)
+
+numPair.pop() // [4]
+console.log(numPair)
+
+numPair.pop() // []
+console.log(numPair)
