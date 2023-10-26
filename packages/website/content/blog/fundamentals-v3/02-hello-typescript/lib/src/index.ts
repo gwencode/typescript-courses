@@ -38,11 +38,17 @@ setTimeout(() => {
   endTime = new Date()
 }, RANDOM_WAIT_TIME)
 
-function add(a: number, b: number) {
-  return a + b
-}
+// function add(a: number, b: number) {
+//   return a + b
+// }
 
-const result = add(3, 4) // => const result: any
-const p = new Promise(result)
+// const result = add(3, 4) // => const result: any
+// const p = new Promise(result)
 // => Argument of type 'number' is not assignable to parameter of type
 // '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void | PromiseLike<void>'.
+
+// Function Return Types
+
+function add(a: number, b: number): number {
+  return a + b
+}
