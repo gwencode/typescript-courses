@@ -58,6 +58,7 @@ let car : {
   make: string
   model: string
   year: number
+  chargeVoltage?: number // optional property
 }
 
 let honda = {
@@ -66,4 +67,38 @@ let honda = {
   year: 2020
 }
 
-console.log(honda.make)
+let tesla = {
+  make: 'Tesla',
+  model: 'Model 3',
+  year: 2020,
+  chargeVoltage: 120
+}
+// console.log(honda.make)
+
+/**
+ * Print information about a car to the console
+ * @param car - the car to print
+ */
+function printCar(car: {
+  make: string
+  model: string
+  year: number
+  chargeVoltage?: number // optional property
+}) {
+  let str = `${car.make} ${car.model} (${car.year})`
+
+  if (typeof car.chargeVoltage !== "undefined") {
+    str += `// ${car.chargeVoltage}v`
+  }
+
+  console.log(str)
+}
+
+printCar(honda)
+printCar(tesla)
+printCar({
+  make: 'Ford',
+  model: 'F-150',
+  year: 2020,
+  // color: 'blue' // Excess Property Check => Object literal may only specify known properties, and 'color' does not exist in type
+})
