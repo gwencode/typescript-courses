@@ -160,3 +160,43 @@ console.log(numPair)
 
 numPair.pop() // []
 console.log(numPair)
+
+// Union Types
+
+function flipCoin(): "heads" | "tails" {
+  if (Math.random() > 0.5) return "heads"
+  return "tails"
+}
+
+// const outcome = flipCoin()
+
+function maybeGetUserInfo(): ["error", Error] | ["success", { name: string; email: string }] {
+  if (flipCoin() === "heads") {
+    return [
+      "success",
+      { name: "Mike North", email: "mike@example.com" },
+    ]
+  } else {
+    return [
+      "error",
+      new Error("The coin landed on TAILS :("),
+    ]
+  }
+}
+
+const outcome = maybeGetUserInfo()
+const [first, second] = outcome
+first // => "success" | "error"
+if (second instanceof Error) {
+  second // => Error
+} else {
+  second // => { name: string, email: string }
+}
+
+// Discriminated Unions
+
+if (outcome[0] === "error" ) {
+  outcome // => ["error", Error]
+} else {
+  outcome // => ["success", { name: string, email: string }]
+}
