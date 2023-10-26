@@ -200,3 +200,19 @@ if (outcome[0] === "error" ) {
 } else {
   outcome // => ["success", { name: string, email: string }]
 }
+
+// Intersection Types
+
+// function makeWeek(): Date & { end: Date } {
+//   //⬅ return type
+
+//   const start = new Date()
+//   const end = new Date(start.valueOf() + ONE_WEEK)
+
+//   return { ...start, end } // kind of Object.assign
+// }
+
+// const thisWeek = makeWeek()
+// thisWeek.toISOString()
+
+// thisWeek.end.toISOString()
