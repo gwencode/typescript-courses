@@ -52,7 +52,19 @@ class Boat {
 }
 type Vehicle = Truck | Car | Boat
 
-let myVehicle: Vehicle = new Boat()
+function randomVehicle(): Vehicle {
+  const randomNumber = Math.random()
+
+  if (randomNumber < 0.33) {
+    return new Truck()
+  } else if (randomNumber < 0.67) {
+    return new Car()
+  } else {
+    return new Boat()
+  }
+}
+
+let myVehicle: Vehicle = randomVehicle()
 
 class UnreachableError extends Error {
   constructor(_nvr: never, message: string) {
@@ -69,6 +81,7 @@ if (myVehicle instanceof Truck) {
   // NEITHER!
   // const neverValue: never = myVehicle // => Type Boat is not assignable to type never
   throw new UnreachableError(
+    // @ts-expect-error // Uncomment to see the error
     myVehicle,
     `Unexpected vehicle type: ${myVehicle.constructor.name}` // UnreachableError: Unexpected vehicle type: Boat
   )
