@@ -31,3 +31,45 @@ if (typeof myUnknown === "string") {
   console.log(myUnknown, "the leftovers")
 
 }
+
+// Bottom Types: never
+
+class Car {
+  drive() {
+    console.log("vroom")
+  }
+}
+class Truck {
+  tow() {
+    console.log("dragging something")
+  }
+}
+
+class Boat {
+  isFloating() {
+    return true
+  }
+}
+type Vehicle = Truck | Car | Boat
+
+let myVehicle: Vehicle = new Boat()
+
+class UnreachableError extends Error {
+  constructor(_nvr: never, message: string) {
+    super(message)
+  }
+}
+
+// The exhaustive conditional
+if (myVehicle instanceof Truck) {
+  myVehicle.tow() // Truck
+} else if (myVehicle instanceof Car) {
+  myVehicle.drive() // Car
+} else {
+  // NEITHER!
+  // const neverValue: never = myVehicle // => Type Boat is not assignable to type never
+  throw new UnreachableError(
+    myVehicle,
+    `Unexpected vehicle type: ${myVehicle.constructor.name}` // UnreachableError: Unexpected vehicle type: Boat
+  )
+}
