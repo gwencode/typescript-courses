@@ -45,7 +45,7 @@ let sedan = new Voiture("Honda", "Accord", 2017)
 //   }
 // }
 
-// +> TypeScript provides a more concise syntax for code like this,
+// => TypeScript provides a more concise syntax for code like this,
 // through the use of param properties:
 class Drive {
   constructor(
