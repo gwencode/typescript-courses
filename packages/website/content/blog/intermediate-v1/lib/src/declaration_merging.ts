@@ -28,8 +28,8 @@ class Fruit {
 
 // how to test for a value
 const valueTest = Fruit // Fruit is a value!
-valueTest.createBanana
+console.log(valueTest.createBanana)
 
 // how to test for a type
 let typeTest: Fruit = {} as any // Fruit is a type!
-typeTest.color
+console.log(typeTest.color)
