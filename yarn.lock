@@ -3918,17 +3918,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/ts-utils@npm:2.10.0":
-  version: 2.10.0
-  resolution: "@parcel/ts-utils@npm:2.10.0"
-  dependencies:
-    nullthrows: ^1.1.1
-  peerDependencies:
-    typescript: ">=3.0.0"
-  checksum: 7151fef86f358e780db3153405598193a7e816ced2de1c61ed3250a04e41a759b4dee959db02630fee8a4a3b4b4561e4e04de7abb1dd99fba635bd3452f7f960
-  languageName: node
-  linkType: hard
-
 "@parcel/ts-utils@npm:2.10.1":
   version: 2.10.1
   resolution: "@parcel/ts-utils@npm:2.10.1"
@@ -24707,7 +24696,7 @@ __metadata:
     "@types/lodash": ^4.14.199
     "@types/node": ^20.8.7
     "@types/pkg-up": ^3.1.0
-    "@types/react": 18.2.28
+    "@types/react": 18.2.37
     "@types/react-dom": 18.2.14
     "@types/react-helmet": ^6.1.7
     "@types/react-test-renderer": ^18.0.3
